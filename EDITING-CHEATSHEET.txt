@@ -1,0 +1,40 @@
+EASY EDITING CHEATSHEET
+
+Main file to edit:
+- data.js
+
+Do not edit unless you want to change the design:
+- styles.css
+- app.js
+- index.html
+
+To change report date:
+- Open data.js
+- Find reportDate
+- Replace the date text
+
+To add a completed task:
+- Find the slide with label: "Completed"
+- Copy one block inside cards: [ ... ]
+- Paste below it
+- Update title, status, tone, and details
+
+Status tone options:
+- success
+- warning
+- info
+- neutral
+- purple
+
+To add a printer:
+- Find the correct printer slide
+- Add one row inside rows
+Example:
+["Printer Name", "Current Status", "Last Replaced Date"]
+
+To add a project:
+- Find label: "Projects"
+- Add a new item with title, tag, and details
+
+To publish online:
+- Upload index.html, data.js, app.js, styles.css to the same folder on GitHub Pages, Netlify, Vercel, or your website hosting.

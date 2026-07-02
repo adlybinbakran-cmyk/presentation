@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Support Update & Progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="deck-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">IT</div>
+        <div>
+          <p class="brand-kicker">Support Report</p>
+          <h1 id="deckTitleSide">IT Support Update</h1>
+        </div>
+      </div>
+
+      <nav id="slideNav" class="slide-nav" aria-label="Slide navigation"></nav>
+
+      <div class="sidebar-footer">
+        <span id="preparedBy"></span>
+        <span id="reportDate"></span>
+      </div>
+    </aside>
+
+    <main class="presentation">
+      <div class="topbar">
+        <button class="icon-btn" id="toggleSidebar" title="Toggle sidebar">☰</button>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+        <div class="slide-count"><span id="currentSlide">1</span>/<span id="totalSlides">1</span></div>
+        <button class="ghost-btn" onclick="window.print()">Print / PDF</button>
+      </div>
+
+      <section id="slideStage" class="slide-stage" aria-live="polite"></section>
+
+      <div class="controls">
+        <button id="prevBtn" class="control-btn">← Previous</button>
+        <button id="nextBtn" class="control-btn primary">Next →</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Edit your report content in data.js only. -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
