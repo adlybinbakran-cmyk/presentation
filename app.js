@@ -12,6 +12,7 @@ const preparedBy = document.getElementById("preparedBy");
 const reportDate = document.getElementById("reportDate");
 const toggleSidebar = document.getElementById("toggleSidebar");
 const sidebar = document.getElementById("sidebar");
+const visibleSlides = deckData.slides.filter(slide => !slide.hidden);
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -161,7 +162,7 @@ function renderHeader(slide) {
 }
 
 function renderSlide() {
-  const slide = deckData.slides[currentIndex];
+  const slide = visibleSlides[currentIndex];
   const renderers = {
     hero: renderHero,
     summary: renderSummary,
@@ -176,10 +177,10 @@ function renderSlide() {
   window.scrollTo({ top: 0, behavior: "smooth" });
   stage.scrollTop = 0;
   currentSlide.textContent = String(currentIndex + 1);
-  totalSlides.textContent = String(deckData.slides.length);
-  progressBar.style.width = `${((currentIndex + 1) / deckData.slides.length) * 100}%`;
+  totalSlides.textContent = String(visibleSlides.length);
+  progressBar.style.width = `${((currentIndex + 1) / visibleSlides.length) * 100}%`;
   prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = currentIndex === deckData.slides.length - 1;
+  nextBtn.disabled = currentIndex === visibleSlides.length - 1;
 
   Array.from(nav.children).forEach((button, index) => {
     button.classList.toggle("active", index === currentIndex);
@@ -190,9 +191,9 @@ function buildNav() {
   deckTitleSide.textContent = deckData.title;
   preparedBy.textContent = deckData.preparedBy;
   reportDate.textContent = deckData.reportDate;
-  totalSlides.textContent = String(deckData.slides.length);
+  totalSlides.textContent = String(visibleSlides.length);
 
-  nav.innerHTML = deckData.slides.map((slide, index) => `
+  nav.innerHTML = visibleSlides.map((slide, index) => `
     <button type="button" data-slide="${index}">
       <span>${String(index + 1).padStart(2, "0")}</span>
       ${escapeHtml(slide.label || slide.title)}
@@ -212,13 +213,13 @@ prevBtn.addEventListener("click", () => {
 });
 
 nextBtn.addEventListener("click", () => {
-  if (currentIndex < deckData.slides.length - 1) currentIndex += 1;
+  if (currentIndex < visibleSlides.length - 1) currentIndex += 1;
   renderSlide();
 });
 
 document.addEventListener("keydown", (event) => {
   if (["ArrowRight", "PageDown", " "].includes(event.key)) {
-    if (currentIndex < deckData.slides.length - 1) currentIndex += 1;
+    if (currentIndex < visibleSlides.length - 1) currentIndex += 1;
     renderSlide();
   }
   if (["ArrowLeft", "PageUp"].includes(event.key)) {
