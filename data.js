@@ -14,22 +14,23 @@
 */
 
 const deckData = {
-  title: "IT Support Update & Progress",
+  title: "IT Update & Progress",
   subtitle: "Support update, completed tasks, internet status, printer patrol, and active IT projects.",
-  preparedBy: "Prepared by: IT Department",
+  preparedBy: "Prepared by: IT Legend",
   reportDate: "Report Date: 3 July 2026",
   company: "Mountain Torq Sdn. Bhd.",
   slides: [
     {
       type: "hero",
       label: "Cover",
-      title: "IT Support Update & Progress",
+      title: "IT Update & Progress",
       eyebrow: "Operations Support Report",
       subtitle: "A structured overview of pending support items, completed tasks, internet status, printer patrol, and active IT-side projects.",
       chips: ["Support", "Infrastructure", "Monitoring", "Progress Update"]
     },
     {
       type: "summary",
+      hidden: true,
       label: "Overview",
       title: "Report Overview",
       subtitle: "Current IT support status based on the latest update.",
