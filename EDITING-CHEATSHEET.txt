@@ -38,3 +38,9 @@ To add a project:
 
 To publish online:
 - Upload index.html, data.js, app.js, styles.css to the same folder on GitHub Pages, Netlify, Vercel, or your website hosting.
+
+
+ANIMATION / CUT-OFF FIX
+- This version has fade/slide animations built into styles.css.
+- Long slides now scroll normally on the page instead of being hidden inside the slide box.
+- You normally only edit data.js for future reports.
