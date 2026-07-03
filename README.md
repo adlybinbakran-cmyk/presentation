@@ -56,3 +56,10 @@ You can upload all files to:
 - Your company website hosting
 
 Make sure `index.html`, `styles.css`, `app.js`, and `data.js` stay in the same folder.
+
+
+## Update Notes
+
+This version includes lightweight CSS animations and a layout fix for longer slides. If a slide has many cards or long notes, the page can now scroll vertically instead of cutting off the bottom content.
+
+For future updates, keep editing `data.js` only. The animation and layout improvements are handled in `styles.css` and `app.js`.
