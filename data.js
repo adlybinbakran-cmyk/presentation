@@ -109,7 +109,7 @@ const deckData = {
           tone: "success",
           details: [
             "The Printer at the main office area was emitting loud sound like an ice cream machine maker at Ai Cha.",
-            "Contacted Capital to resolved the issue and the next day, they came and replace the toner drum."
+            "Contacted Capital to resolved the issue and the next day, they came and replace the toner drum.",
             "Printer is no longer sound like an ice cream machine."
           ]
         },
