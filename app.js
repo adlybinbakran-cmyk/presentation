@@ -173,6 +173,8 @@ function renderSlide() {
   };
 
   stage.innerHTML = (renderers[slide.type] || renderCards)(slide);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  stage.scrollTop = 0;
   currentSlide.textContent = String(currentIndex + 1);
   totalSlides.textContent = String(deckData.slides.length);
   progressBar.style.width = `${((currentIndex + 1) / deckData.slides.length) * 100}%`;
