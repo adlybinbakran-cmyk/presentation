@@ -104,6 +104,16 @@ const deckData = {
           ]
         },
         {
+          title: "Printer Ricoh MP C3004 Emitting Noise",
+          status: "Resolved",
+          tone: "success",
+          details: [
+            "The Printer at the main office area was emitting loud sound like an ice cream machine maker at Ai Cha.",
+            "Contacted Capital to resolved the issue and the next day, they came and replace the toner drum."
+            "Printer is no longer sound like an ice cream machine."
+          ]
+        },
+        {
           title: "Faulty UPS Battery at KP",
           status: "Resolved / Installed",
           tone: "success",
@@ -160,8 +170,8 @@ const deckData = {
       subtitle: "Toner and consumable status for KK Office printers.",
       columns: ["Printer", "Current Status", "Last Replaced / Replenished"],
       rows: [
-        ["Ricoh Aficio MP3004", "Colour: 90% · Black: 80%", "1 February 2026"],
-        ["Fuji Xerox S2520", "No level indicator. Toner has not shown replacement warning.", "1 February 2026"],
+        ["Ricoh Aficio MP3004", "Colour: 90% · Black: 80%", "-"],
+        ["Fuji Xerox S2520", "No level indicator. Toner has not shown replacement warning.", "10 April 2026"],
         ["Canon MF232w", "No toner level indicator. Toner is still usable.", "25 November 2025"],
         ["Canon MF3010", "No level indicator. Toner has not shown replacement warning.", "15 August 2024"],
         ["Brother QL-570", "Sticker labels are still thick. No replenishment needed for now.", "24 November 2025"]
@@ -174,9 +184,9 @@ const deckData = {
       subtitle: "Toner and consumable status for KP Office and PH printers.",
       columns: ["Location", "Printer", "Current Status", "Last Replaced / Replenished"],
       rows: [
-        ["KP Office", "Canon MF643CDW", "Black: 70% · Colour: 0%. Colour will be replenished only when needed.", "24 May 2026"],
+        ["KP Office", "Canon MF643CDW", "Black: 30% · Colour: 0%. Colour will be replenished only when needed.", "24 May 2026"],
         ["KP Office", "Canon E470", "Black: Above 50% · Colour: 0%. Colour will be replenished only when needed.", "24 November 2025"],
-        ["PH", "Canon MF4410", "No indicator. Toner has not shown replacement warning.", "5 March 2025"]
+        ["PH", "Canon MF4410", "No indicator. Toner has not shown replacement warning.", "21 Juneh 2026"]
       ]
     },
     {
