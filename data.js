@@ -186,7 +186,7 @@ const deckData = {
       rows: [
         ["KP Office", "Canon MF643CDW", "Black: 30% · Colour: 0%. Colour will be replenished only when needed.", "24 May 2026"],
         ["KP Office", "Canon E470", "Black: Above 50% · Colour: 0%. Colour will be replenished only when needed.", "24 November 2025"],
-        ["PH", "Canon MF4410", "No indicator. Toner has not shown replacement warning.", "21 Juneh 2026"]
+        ["PH", "Canon MF4410", "No indicator. Toner has not shown replacement warning.", "21 June 2026"]
       ]
     },
     {
